@@ -1,133 +1,365 @@
-<!DOCTYPE html>
-<html lang="en">
+body {
+    font-family: Arial, sans-serif;
+    background-color:#d3f4ff;
+    margin: 0;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="test12.css">
-	<link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <title>Left and Top Navigation</title>
-</head>
+.top-menu {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
 
-<body>
-    <div class="top-menu">
-        <div class="search-box">
-            <input type="text" placeholder="Search">
-            <button><i class="fas fa-search"></i></button>
-        </div>
-        <div class="notification">
-            <button class="notification-button"><i class="fas fa-bell"></i></button>
-            <span class="badge">3</span>
-            <!-- Display notification count -->
-        </div>
-        <div class="profile-option">
-            <i class="fa-solid fa-magnifying-glass"></i>
-        </div>
-    </div>
-    <div class="left-nav">
-        <ul>
-            <li><a href="#Dashboard">Dashboard</a></li>
-            <li><a href="#CRM">CRM</a></li>
-            <li><a href="#Work order">Work Order</a></li>
-            <li><a href="#Report">Report</a></li>
-            <li><a href="#Inventory">Inventory</a></li>
-            <li><a href="#Settings">Settings</a></li>
-        </ul>
-        <br><br>
-        <br><br><br>
-        <br>
-        <br><br><br><br>
-        <h5>Powered by WOrMS</h5>
-        </br>
+.search-box input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    margin-left: 200px;
+}
+
+.search-box button {
+    padding: 5px 10px;
+    background-color: #555;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.search-box1 input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    margin-left: 10px;
+}
+
+.search-box1 button {
+    padding: 5px 10px;
+    background-color: #555;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+h3 {
+    font-weight: bold;
+}
+
+h4 {
+    font-weight: bold;
+}
+
+.search-box button:hover {
+    background-color: #444;
+}
+
+.notification .notification-button {
+    padding: 5px;
+    background-color: #555;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.notification .notification-button:hover {
+    background-color: #444;
+}
+
+.notification .notification-button {
+    padding: 5px;
+    background-color: #555;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.notification .notification-button:hover {
+    background-color: #444;
+}
+
+.notification .badge {
+    background-color: red;
+    color: white;
+    padding: 3px 6px;
+    border-radius: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+}
+
+.left-nav {
+    background-color: gray;
+    /* Adjust the background color as needed */
+    width: 110px;
+    height: 450px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.left-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.left-nav li {
+    padding: 10px;
+}
+
+.left-nav li a {
+    color: #f7f2f2;
+    /* Adjust the link color as needed */
+    text-decoration: none;
+    padding-top: 4rem;
+}
+
+.left-nav li a:hover {
+    background-color: #ccc;
+    /* Adjust the hover color as needed */
+}
+
+.extra-button {
+    margin: 10px;
+    /* Adjust the margin as needed */
+    padding: 10px 20px;
+    /* Adjust the padding as needed */
+    background-color: #176B87;
+    /* Button color */
+    color: white;
+    border: none;
+    cursor: pointer;
+    float: right;
+}
+
+.extra-button:hover {
+    background-color: #444;
+}
+
+.columnf {
+    float: left;
+    width: 15%;
+    padding: 0 10px;
+}
+
+
+/* Remove extra left and right margins, due to padding */
+
+.rowf {
+    margin: 0 -5px;
+}
+
+
+/* Clear floats after the columns */
+
+.rowf:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* Responsive columns */
+
+@media screen and (max-width: 600px) {
+    .columnf {
+        width: 90%;
+        display: block;
+        margin-bottom: 20px;
+        margin-right: 500px;
+    }
+}
+
+
+/* Style the counter cards */
+
+.cardf {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: white;
+    margin-left: 160px;
+    height: 150px;
+    width: 150px;
+}
+
+.cardf:hover {
+    outline: var(--outline-hover);
+    outline-offset: 0rem;
+}
 
 
 
-    </div>
-
-    <button class="extra-button">Extra Button</button>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class="rowf">
-        <div class="columnf">
-            <div class="cardf">
-                <h3>$16.4K</h3>
-                <h4>Total Revenue</h4>
-                <p>90% present Month</p>
-            </div>
-        </div>
 
 
-        <div class="rowf">
-            <div class="columnf">
-                <div class="cardf">
-                    <h3>1400</h3>
-                    <p>total accounts</p>
-                    <p>15% Present Month</p>
-                </div>
-            </div>
-
-            <div class="rowf">
-                <div class="columnf">
-                    <div class="cardf">
-                        <h3>120</h3>
-                        <h4>New Accounts</h4>
-                        <p>90% present Month</p>
-                    </div>
-                </div>
-
-                <div class="rowf">
-                    <div class="columnf">
-                        <div class="cardf">
-                            <h3>1380</h3>
-                            <h4>Active Accounts</h4>
-                            <p>15% present month</p>
-                        </div>
-                    </div>
-
-                    <div class="rowf">
-                        <div class="columnf">
-                            <div class="cardf">
-                                <h3>40</h3>
-                                <h4>Active technicians</h4>
-                                <p>90% present month</p>
-                            </div>
-                        </div>
-						<br>
-						<br>
-						<br>
-						<br>
-					<div class="row1">
-  <div class="column1">
-    <div class="card1">
-      <h3>Card 1</h3>
-      <p>Some text</p>
-      <p>Some text</p>
-    </div>
-  </div>
 
 
-<div class="row2">
-  <div class="column2">
-    <div class="card2">
-	<i class="fa-solid fa-location-dot"></i>
-      <h3>Live Map</h3>
-	  <div class="search-box1">
-            <input type="text" placeholder="Search">
-            <button><i class="fas fa-search"></i></button>
-        </div>
-      <p>Some text</p>
-      <p>Some text</p>
-    </div>
-  </div>
-  <br>
-  <br>
+
+
+
+
+.column_2 {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row_2 {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row_1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column_2 {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+.column1 {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row1 {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column1 {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card1 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: white;
+  margin-left:180px;
+  margin-top:100px;
+  width:400px;
+  height:300px;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.column2 {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row2 {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column2 {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card2 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: white;
+margin-left:460px;
+  margin-top:100px;
+  width:400px;
+  height:300px;
   
   
-  
-  
-   
-  
-</body>
-</html>
+
+}
+
+
+
+
+
+
+
